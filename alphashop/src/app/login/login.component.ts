@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,19 +13,22 @@ export class LoginComponent implements OnInit {
   auth = false;
   errorMessage = "Your user or your password is wrong!"
   loginMessage = "Welcome to Alphashop ";
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  manageLogin() : void{
+  manageLogin(): void {
 
-    if(this.userId === "Jacopo" && this.password === "1234"){
+    if (this.userId === "Jacopo" && this.password === "1234") {
       this.auth = true;
-      console.log("Hello " + this.userId)
+      console.log("Hello " + this.userId);
+      this.router.navigate(['welcome', this.userId]);
+
     } else {
       this.auth = false;
-      console.log(this.errorMessage)
+      console.log(this.errorMessage);
     }
   }
 }

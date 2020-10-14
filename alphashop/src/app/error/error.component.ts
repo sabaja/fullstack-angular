@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorComponent implements OnInit {
 
+  errorMessage = 'Sorry, the choosen page does not exist!';
+
   constructor() { }
 
   ngOnInit(): void {

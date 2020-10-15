@@ -1,8 +1,5 @@
-<div *ngIf="!auth">{{ errorMessage }}</div>
-
-<div *ngIf="auth">{{ loginMessage }} {{ userId }}</div>
-
-<div class="container">
+<app-jumbotron [subtitle]="'Please, insert your user and password'" [title]="'Authentication'"></app-jumbotron>
+<!--div class="container">
   <label for="userId"><b>User Id:</b></label>
   <input [(ngModel)]="userId" id="userId" placeholder="Enter Username" type="text">
 
@@ -14,5 +11,29 @@
     <input checked="checked" name="remember" type="checkbox"> Remember me
   </label>
 
+  <div *ngIf="!auth">{{ errorMsg }}</div>
+  <div *ngIf="auth">{{ loginMsg }} {{ userId }}</div>
 
+</div-->
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form">
+      <h3>Login Form </h3>
+      <div class="form-group">
+        <input [(ngModel)]="userId" class="form-control" id="userId" placeholder="Nome Utente" type="text">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="password" class="form-control" id="password" placeholder="Password" type="password">
+      </div>
+      <div class="form-group">
+        <button (click)=manageLogin() class="btnSubmit">Connetti</button>
+      </div>
+      <div class="form-group">
+        <a class="ForgetPwd" href="#">Forgot password?</a>
+      </div>
+      <div *ngIf='!auth' class="alert alert-danger" role="alert">
+        {{errorMsg}}
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +10,12 @@ export class LoginComponent implements OnInit {
 
   userId = "";
   password = "";
-  auth = false;
-  errorMessage = "Your user or your password is wrong!"
-  loginMessage = "Welcome to Alphashop ";
+  auth = true;
+  errorMsg = "Your user or your password is wrong!"
+  loginMsg = "Welcome to Alphashop ";
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
   }
@@ -25,10 +26,9 @@ export class LoginComponent implements OnInit {
       this.auth = true;
       console.log("Hello " + this.userId);
       this.router.navigate(['welcome', this.userId]);
-
     } else {
       this.auth = false;
-      console.log(this.errorMessage);
+      console.log(this.errorMsg);
     }
   }
 }

@@ -9,6 +9,8 @@ import {LoginComponent} from './login/login.component';
 import {ErrorComponent} from './error/error.component';
 import {ItemsComponent} from './items/items.component';
 import {NavbarComponent} from './navbar/navbar.component';
+import {FooterComponent} from './footer/footer.component';
+import {JumbotronComponent} from './jumbotron/jumbotron.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import {NavbarComponent} from './navbar/navbar.component';
     LoginComponent,
     ErrorComponent,
     ItemsComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    JumbotronComponent
 
   ],
   imports: [

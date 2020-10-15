@@ -1,12 +1,8 @@
-<div style="text-align:center">
-  <h1> {{ title }}</h1>
-  <br>
-  <div>
-    <h3>
-      {{ message }} Welcome {{ userId }}! Click <a routerLink="/items">here</a>
-      to access to Items form
-    </h3>
-  </div>
+<div style="text-align:justify-all">
+  <app-jumbotron [show]="false" [subtitle]="'A place to shop safely'" [title]="'Welcome to Alphashop'"></app-jumbotron>
 
 </div>
-
+<div style="text-align:justify-all">
+  Hi {{ userId }}! Click <a routerLink="/items">here</a>
+  to access to Items form
+</div>

@@ -1,13 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { LoginComponent } from './login/login.component';
-import { ErrorComponent } from './error/error.component';
-import { ItemsComponent } from './items/items.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {WelcomeComponent} from './welcome/welcome.component';
+import {LoginComponent} from './login/login.component';
+import {ErrorComponent} from './error/error.component';
+import {ItemsComponent} from './items/items.component';
+import {NavbarComponent} from './navbar/navbar.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ItemsComponent } from './items/items.component';
     WelcomeComponent,
     LoginComponent,
     ErrorComponent,
-    ItemsComponent
+    ItemsComponent,
+    NavbarComponent
 
   ],
   imports: [

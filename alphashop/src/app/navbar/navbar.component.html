@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-target="#navbarTogglerDemo01" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <!-- Inizio Elementi Menù -->
+    <a class="navbar-brand" href="/index">AlphaShop</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="/index">
+          <span aria-hidden="true" class="oi oi-home" title="home"></span>
+          Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/items">
+          <span aria-hidden="true" class="oi oi-box" title="items"></span>
+          Items
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/promozioni">
+          <span aria-hidden="true" class="oi oi-bullhorn" title="promozioni"></span>
+          Promozioni
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/fidelity">
+          <span aria-hidden="true" class="oi oi-credit-card" title="punti"></span>
+          Fidelity
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/clienti">
+          <span aria-hidden="true" class="oi oi-people" title="clienti"></span>
+          <span class="badge"></span>
+          Clienti
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ordini">
+          <span aria-hidden="true" class="oi oi-cart" title="ordini"></span>
+          <span class="badge"></span>
+          Ordini
+        </a>
+      </li>
+    </ul>
+
+    <!-- Search Box -->
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" name="argomento" type="text">
+      <input class="btn btn-outline-success my-2 my-sm-0" id="submit" type="submit" value="Cerca">
+    </form>
+
+    <!-- dropdown menu -->
+    <div class="dropdown">
+      <button aria-expanded="true"
+              aria-haspopup="true"
+              class="btn btn-default dropdown-toggle thumbnail"
+              data-toggle="dropdown"
+              id="dropdownMenu1"
+              type="button">
+        <img class="img-circle" src="/assets/images/offline_user.png">
+        <span class="caret"></span>
+      </button>
+      <div aria-labelledby="dropdownMenu1" class="dropdown-menu">
+        <a class="dropdown-item" href="/login/form">Accedi</a>
+        <a class="dropdown-item" href="/register">Registrati</a>
+        <div class="dropdown-divider"></div>
+        <form action="" id="myHiddenFormId" method="post" style="display: none">
+          <input name="logout" type="hidden" value="${User}">
+          <input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
+        </form>
+        <a class="dropdown-item" href="" onclick="$('#myHiddenFormId').submit(); return false;"
+           title="Logout">Logout</a>
+      </div>
+    </div>
+    <!-- Fine dropdown menu -->
+
+  </div>
+</nav>

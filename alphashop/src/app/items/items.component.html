@@ -1,0 +1,30 @@
+<h1>Available Items</h1>
+
+<table border="1" id="items">
+
+  <caption font-weight="bold" style="color:red">Food</caption>
+  <thead>
+  <tr>
+    <th>Cod-Item</th>
+    <th>Description</th>
+    <th>Um</th>
+    <th>Pieces</th>
+    <th>Wight(KG/LT)</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of items">
+    <td>{{ item.codItem }}</td>
+    <td>{{ item.description }}</td>
+    <td>{{ item.um }}</td>
+    <td>{{ item.pieces }}</td>
+    <td>{{ item.wight }}</td>
+    <td>{{ item.price }}</td>
+    <td>{{ item.isActive }}</td>
+    <td>{{ item.date | date }}</td>
+  </tr>
+  </tbody>
+</table>

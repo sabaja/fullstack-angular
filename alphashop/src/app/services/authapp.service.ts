@@ -36,4 +36,15 @@ export class AuthappService {
   private isNull(x) {
     return !this.nonNull(x);
   }
+
+  clearAll() {
+    sessionStorage.clear();
+  }
+
+  logOut() {
+    let user = sessionStorage.getItem(this.USER_ID_KEY);
+    if (this.nonNull(user)) {
+      sessionStorage.removeItem(user);
+    }
+  }
 }

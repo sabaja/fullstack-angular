@@ -75,9 +75,8 @@
           <input name="logout" type="hidden" value="${User}">
           <input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
         </form>
-        <a *ngIf="authappService.isLogged()" class="dropdown-item" href=""
-           onclick="$('#myHiddenFormId').submit(); return false;"
-           title="Logout">Logout {{authappService.loggedUser()}}</a>
+        <a *ngIf="authappService.isLogged()" class="dropdown-item" href="logout"
+           title="logout">Logout {{authappService.loggedUser()}}</a>
         <a *ngIf="!authappService.isLogged()" class="dropdown-item disabled" href="" title="Logout">Logout</a>
       </div>
     </div>
